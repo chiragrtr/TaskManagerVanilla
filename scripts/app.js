@@ -50,15 +50,6 @@ var deleteList = function(event) {
   _delete(event, ".list");
 };
 
-var hideInputBoxOnHeading = function(event) {
-  var parent = event.target.parentNode;
-  hideInputAndShowElem(parent, "h5");
-};
-
-var showInputBoxForHeading = function(event) {
-  showInputBox(event, true);
-};
-
 var addListeners = function(event, elements, listener) {
   Array.from(elements).forEach(function(element) {
     element.addEventListener(event, listener);
@@ -126,7 +117,7 @@ function allowDrop(event) {
   event.preventDefault();
 }
 
-function drag(ev) {
+function drag(event) {
   event.dataTransfer.setData("taskId", event.target.id);
 }
 
