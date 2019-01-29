@@ -24,15 +24,18 @@ var hideTextOnTask = function(event) {
   hideText(task);
 };
 
-var saveTask = function(event, isHeading) {
+var save = function(event, isHeading) {
   var parent = event.target.closest("button").closest("div");
-  var span = parent.querySelector(isHeading ? "h5" : "span");
+  var element = parent.querySelector(isHeading ? "h5" : "span");
   var input = parent.querySelector("input");
-  span.innerText = input.value;
+  element.innerText = input.value;
 };
 
+var saveTask = function(event) {
+  save(event, false);
+};
 var saveHeading = function(event) {
-  saveTask(event, true);
+  save(event, true);
 };
 
 var _delete = function(event, selector) {
