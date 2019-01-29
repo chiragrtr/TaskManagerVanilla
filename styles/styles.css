@@ -1,0 +1,97 @@
+.task {
+  background: white;
+  border: 3px solid #dfe3e6;
+  border-radius: 10px 10px 10px 10px;
+  margin: 0 0 4px;
+  display: block;
+  cursor: pointer;
+  padding-left: 5px;
+  padding-top: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  clear: both;
+  float: none;
+}
+
+.add-list,
+.add-task {
+  background: #dfe3e6;
+}
+
+.main {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.list {
+  min-width: 300px;
+  display: table;
+  background: #dfe3e6;
+  padding: 10px;
+  border: 1 rem solid white;
+  border-radius: 3px 3px 3px;
+  margin: 20px 20px 20px 20px;
+  /* height: 30vh;  */
+  flex-direction: column;
+}
+
+.lists-container {
+  height: 100%;
+  flex: 1 1;
+  display: flex; /* establish flex container */
+  flex-direction: row; /* default value; can be omitted */
+  flex-wrap: nowrap; /* default value; can be omitted */
+  justify-content: right;
+  overflow: auto;
+}
+
+#root {
+  background: rgb(75, 191, 107);
+}
+
+h2 {
+  padding: 40px 0px 0px 20px;
+}
+
+.task:hover {
+  background: #f5f6f7;
+}
+
+.icon-add::before {
+  content: "+ ";
+}
+
+h5 {
+  display: inline-block;
+}
+
+.close {
+  display: none;
+}
+
+.task:hover .close,
+.heading:hover .close {
+  display: inline-block;
+}
+
+.task span {
+  pointer-events: none;
+}
+
+.show-text span,
+.show-text h5 {
+  display: inline-block;
+}
+
+.show-text input,
+.show-text button,
+.show-text .close {
+  display: none;
+}
+
+.hide-text span,
+.hide-text h5 {
+  display: none;
+}

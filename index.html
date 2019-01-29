@@ -1,0 +1,58 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <noscript> You need to enable JavaScript to run this app. </noscript>
+    <div id="root">
+      <div class="main">
+        <h2><b>Welcome to your Task Manager</b></h2>
+        <br />
+        <div class="lists-container">
+          <div class="list">
+            <a href="#" class="add-list task"
+              ><span class="icon-add">Click to add a new list</span></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script id="dummyTask" type="text/template">
+      <div class="task show-text" draggable="true" ondragstart="drag(event)">
+              <span>Click to edit task </span>
+              <div class="close close-task">x</div>
+              <input
+                class="hide"
+                type="text"
+                placeholder="Enter task description"
+              />
+              <button class="btn btn-sm btn-primary">Save</button>
+            </div>
+    </script>
+
+    <script id="dummyList" type="text/template">
+      <div class="list" ondrop="drop(event)" ondragover="allowDrop(event)">
+              <div class="heading show-text">
+                <h5>Click to edit heading</h5>
+                <div class="close close-list">x</div>
+                <input
+                  class="hide"
+                  type="text"
+                  placeholder="Enter List Heading"
+                /><button class="btn btn-sm btn-primary">Save</button>
+              </div>
+              <a class="add-task task" draggable="false" href="#"
+                ><span class="icon-add"></span>Click to add task</a
+              >
+            </div>
+    </script>
+    <script src="scripts/app.js"></script>
+  </body>
+</html>
